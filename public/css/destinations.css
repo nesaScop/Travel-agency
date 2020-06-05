@@ -1,0 +1,255 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+}
+
+
+
+h1{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+h2{
+  display: none;
+  color: white;
+}
+.p{
+  display:none;
+}
+.continent:hover .p{
+  display:block;
+}
+
+.pokazi{
+  display:none;
+}
+
+.continent:hover .pokazi{
+  display:block;
+}
+
+
+.continent:hover h2{
+  display: block;
+  margin: 10px;
+}
+
+.grid {
+  border: 1px solid #333;
+  margin: 0px auto;
+  width: 80%;
+}
+
+.continent {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin: 15px;
+}
+
+.continent.na:nth-child(1){
+  background-image: url("http://www.telegraph.co.uk/content/dam/Travel/2016/December/new.york.skyline.alamy.jpg?imwidth=1400");
+  background-size: cover;
+}
+.continent.na:nth-child(2){
+  background-image: url("https://www.canyontours.com/wp-content/uploads/2015/01/grand-canyon-south-rim-tour-bright-angel-point.jpg");
+  background-size: cover;
+}
+.continent.na:nth-child(3){
+  background-image: url("https://lh6.googleusercontent.com/proxy/XO1NEPz6gTrhE8mHfMB7dMJ4saCcMVIK30GnhJC0c8Q_9RlXhygARet_oIBY3lvzXJS4fV2y6CK44iqzSLle011F8CfUiqy9i2VB9Mvli1WQoy5BbSa0985GiT8gX51OH2zDgi8Xmp3QbEQ=w1064-h400-n-no");
+  background-size: cover;
+}
+
+.continent.ma:nth-child(4){
+  background-image: url("https://lh6.googleusercontent.com/proxy/35J-kZybNPFii_HYL_ygjtsnPTPQFbluwKxDpfMbc6oJfBPBhUZ5cS7pzXBeSM4XcvIhwW7Js4rBOs5QCMV0cvzHUSJ40oX_SioQcgcJKnRXLtchw2NiMcu6Fni_NnQ-pNTTtoOKH4KQiqo=w1064-h400-n-no");
+  background-size: cover;
+}
+.continent.ma:nth-child(5){
+  background-image: url("http://airlines-airports.com/wp-content/uploads/2016/08/belize-1.jpg");
+  background-size: cover;
+}
+.continent.ma:nth-child(6){
+  background-image: url("https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-size: cover;
+}
+.continent.za:nth-child(7){
+  background-image: url("http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1473173667/machu-PICCHU0916.jpg?itok=DTZZvAZT");
+  background-size: cover;
+}
+.continent.za:nth-child(8){
+  background-image: url("https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/21715/SITours/one-day-in-rio-de-janeiro-city-sightseeing-tour-in-rio-de-janeiro-248045.jpg");
+  background-size: cover;
+}
+.continent.za:nth-child(9){
+  background-image: url("https://storage.googleapis.com/chile-travel-static-content/2016/03/santiago_shutterstock_198592406.jpg");
+  background-size: cover;
+}
+.continent.eu:nth-child(10){
+  background-image: url("http://www.telegraph.co.uk/content/dam/business/2017/04/20/TELEMMGLPICT000125756985.jpeg?imwidth=1400");
+  background-size: cover;
+}
+.continent.eu:nth-child(11){
+  background-image: url("http://www.telegraph.co.uk/content/dam/news/2017/01/17/Rome-Forum.jpg?imwidth=1400");
+  background-size: cover;
+}
+.continent.eu:nth-child(12){
+  background-image: url("http://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/France/Paris/paris-attractions-xlarge.jpg");
+  background-size: cover;
+}
+.continent.af:nth-child(13){
+  background-image: url("http://www.telegraph.co.uk/content/dam/Travel/Destinations/Africa/Morocco/Marrakech/Marrakech-overview-main%20square-xlarge.jpg");
+  background-size: cover;
+}
+.continent.af:nth-child(14){
+  background-image: url("http://www.travelstart.co.za/blog/wp-content/uploads/2013/11/Greg-Lumley.jpg");
+  background-size: cover;
+}
+.continent.af:nth-child(15){
+  background-image: url("https://www.travelguideline.net/wp-content/uploads/2020/01/mauritius-aerial-view-1200x800.jpg");
+  background-size: cover;
+}
+.continent.az:nth-child(16){
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2d/ad/bangkok.jpg");
+  background-size: cover;
+}
+.continent.az:nth-child(17){
+  background-image: url("https://lh3.googleusercontent.com/proxy/AlF-B-UObLtCEyRKuSOea_aA531saZMC5ljEvcDalOVwXvpFWQoQkn6Hby5tB8A_deflaRk_7zyQlkeMDECIRbnjvXT6YErmfzKiIubqD-TtEJotjIOQVNv-GjP1XwTdKcn6B3QVFvFmANs=w1064-h400-n-no");
+  background-size: cover;
+}
+.continent.az:nth-child(18){
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/03/9b/30/02/phuket.jpg");
+  background-size: cover;
+}
+
+.continent.na:hover{
+ 	background: firebrick;
+}
+.continent.ma:hover{
+ 	background: darkcyan;
+}
+.continent.za:hover{
+ 	background: mediumpurple;
+}
+.continent.eu:hover{
+ 	background: goldenrod;
+}
+.continent.af:hover{
+ 	background: green;
+}
+.continent.az:hover{
+ 	background: antiquewhite;
+}
+
+@media screen and (max-width: 1230px){
+	.continent{
+		width: 390px;
+	}
+}
+
+@media screen and (max-width: 1050px){
+	.continent{
+		width: 330px;
+	}
+}
+@media screen and (max-width: 980px){
+	.continent{
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 850px){
+	.continent{
+		width: 280px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.continent{
+		width: 360px;
+	}
+}
+
+.container {
+  margin: 0 auto;
+}
+
+
+
+/* navbar */
+.navbar {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #2196F3;
+}
+
+.logo,
+.nav {
+  display: inline-block;
+  margin: 0;
+}
+
+/* nav links */
+.nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.navbar a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #DDD;
+}
+
+/* if you want pull right nav links */
+.nav-right {
+  float: right;
+  line-height: 39px;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 677px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

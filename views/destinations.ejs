@@ -1,0 +1,461 @@
+<link rel="stylesheet" type="text/css" href="css/destinations.css">
+
+<header>
+<!-- navbar -->
+<nav class="navbar">
+  
+  <div class="container">
+    
+    <h1 class="logo"><a href="#">Travel Agency</a></h1>
+    <ul class="nav nav-right">
+      <li><a href="/">Home</a></li>
+      <li><a href="/destinations">Destinations</a></li>
+      <li><a href="#" id="logoutButton">Logout</a></li>
+    </ul>
+  </div><!--/.container-->
+  
+</nav><!--/.navbar-->
+
+  <h1> Travel Locations</h1>
+
+</header>
+<style>
+body {
+  background-image: url('images/slika2.jpg');
+}
+</style>
+
+<script>
+  const token = localStorage.getItem('jwt');
+        if(!token){
+            window.location.href = '/login';
+        }
+</script>
+
+<div class= "grid">
+  <div class= "continent na" data-category="na">
+    <h2 class="name"> New York </h2>
+
+    <select class="pokazi" id="ny-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[0].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="ny-buy">Kupi</button>
+  </div>
+
+  <div class= "continent na" data-category="na">
+    <h2 class="name"> Grand Canyon </h2>
+
+    <select class="pokazi" id="gc-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[1].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="gc-buy">Kupi</button>
+  </div>
+
+  <div class= "continent na" data-category="na">
+    <h2 class="name"> Los Angeles </h2>
+    <select class="pokazi" id="la-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[2].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="la-buy">Kupi</button>
+  </div>
+
+  <div class= "continent ma" data-category="ma">
+    <h2 class="name"> Panama City</h2>
+    <select class="pokazi" id="pc-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[3].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="pc-buy">Kupi</button>
+  </div>
+
+  <div class= "continent ma" data-category="ma">
+    <h2 class="name"> Belize </h2>
+    <select class="pokazi" id="be-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[4].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="be-buy">Kupi</button>
+  </div>
+
+  <div class= "continent ma" data-category="ma">
+    <h2 class="name"> Cuba </h2>
+    <select class="pokazi" id="cu-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[5].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="cu-buy">Kupi</button>
+  </div>
+
+  <div class= "continent za" data-category="za">
+    <h2 class="name"> Machu Picchu </h2>
+    <select class="pokazi" id="mp-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[6].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="mp-buy">Kupi</button>
+  </div>
+
+  <div class= "continent za" data-category="za">
+    <h2 class="name"> Rio de Janeiro </h2>
+    <select class="pokazi" id="rd-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[7].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="rd-buy">Kupi</button>
+  </div>
+
+  <div class= "continent za" data-category="za">
+    <h2 class="name"> Santiago </h2>
+    <select class="pokazi" id="sa-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[8].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="sa-buy">Kupi</button>
+  </div>
+
+  <div class= "continent eu" data-category="eu">
+    <h2 class="name"> London </h2>
+    <select class="pokazi" id="lo-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[9].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="lo-buy">Kupi</button>
+  </div>
+
+  <div class= "continent eu" data-category="eu">
+    <h2 class="name"> Rome </h2>
+    <select class="pokazi" id="ro-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[10].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="ro-buy">Kupi</button>
+  </div>
+
+  <div class= "continent eu" data-category="eu">
+    <h2 class="name"> Paris </h2>
+    <select class="pokazi" id="pa-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[11].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="pa-buy">Kupi</button>
+  </div>
+
+  <div class= "continent af" data-category="af">
+    <h2 class="name"> Marrakech </h2>
+    <select class="pokazi" id="ma-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[12].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="ma-buy">Kupi</button>
+  </div>
+
+  <div class= "continent af" data-category="af">
+    <h2 class="name"> Cape Town </h2>
+    <select class="pokazi" id="ct-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[13].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="ct-buy">Kupi</button>
+  </div>
+
+  <div class= "continent af" data-category="af">
+    <h2 class="name"> Mauritius </h2>
+    <select class="pokazi" id="mr-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[14].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="mr-buy">Kupi</button>
+  </div>
+
+  <div class= "continent az" data-category="az">
+    <h2 class="name"> Bangkok </h2>
+    <select class="pokazi" id="ba-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[15].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="ba-buy">Kupi</button>
+  </div>
+
+  <div class= "continent az" data-category="az">
+    <h2 class="name"> Hong Kong </h2>
+    <select class="pokazi" id="hk-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[16].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="hk-buy">Kupi</button>
+  </div>
+
+  <div class= "continent az" data-category="az">
+    <h2 class="name"> Phuket </h2>
+    <select class="pokazi" id="pu-select">
+      <option value="*" selected="selected">Izaberite datum polaska</option>
+      <% locations[17].dates.forEach(date => { %>
+        <option value="<%= date %>"><%= date %></option>
+      <% }) %>
+    </select>
+    <button class="p" type="submit" id="pu-buy">Kupi</button>
+  </div>
+    
+
+</div> 
+
+<script>
+  const nyBuy = document.querySelector('#ny-buy');
+  const nySelect = document.querySelector('#ny-select');
+
+  nyBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/new york/' + nySelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const gcBuy = document.querySelector('#gc-buy');
+  const gcSelect = document.querySelector('#gc-select');
+
+  gcBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/grand canyon/' + gcSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const laBuy = document.querySelector('#la-buy');
+  const laSelect = document.querySelector('#la-select');
+
+  laBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/los angeles/' + laSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+  const pcBuy = document.querySelector('#pc-buy');
+  const pcSelect = document.querySelector('#pc-select');
+
+  pcBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/panama city/' + pcSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const beBuy = document.querySelector('#be-buy');
+  const beSelect = document.querySelector('#be-select');
+
+  beBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/belize/' + beSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const cuBuy = document.querySelector('#cu-buy');
+  const cuSelect = document.querySelector('#cu-select');
+
+  cuBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/cuba/' + cuSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const mpBuy = document.querySelector('#mp-buy');
+  const mpSelect = document.querySelector('#mp-select');
+
+  mpBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/machu picchu/' + mpSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const rdBuy = document.querySelector('#rd-buy');
+  const rdSelect = document.querySelector('#rd-select');
+
+  rdBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/rio de janeiro/' + rdSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const saBuy = document.querySelector('#sa-buy');
+  const saSelect = document.querySelector('#sa-select');
+
+  saBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/santiago/' + saSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const loBuy = document.querySelector('#lo-buy');
+  const loSelect = document.querySelector('#lo-select');
+
+  loBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/london/' + loSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const roBuy = document.querySelector('#ro-buy');
+  const roSelect = document.querySelector('#ro-select');
+
+  roBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/rome/' + roSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const paBuy = document.querySelector('#pa-buy');
+  const paSelect = document.querySelector('#pa-select');
+
+  paBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/paris/' + paSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const maBuy = document.querySelector('#ma-buy');
+  const maSelect = document.querySelector('#ma-select');
+
+  maBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/marrakech/' + maSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const ctBuy = document.querySelector('#ct-buy');
+  const ctSelect = document.querySelector('#ct-select');
+
+  ctBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/cape town/' + ctSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const mrBuy = document.querySelector('#mr-buy');
+  const mrSelect = document.querySelector('#mr-select');
+
+  mrBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/mauritius/' + mrSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const baBuy = document.querySelector('#ba-buy');
+  const baSelect = document.querySelector('#ba-select');
+
+  baBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/bangkok/' + baSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const hkBuy = document.querySelector('#hk-buy');
+  const hkSelect = document.querySelector('#hk-select');
+
+  hkBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/hong kong/' + hkSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const puBuy = document.querySelector('#pu-buy');
+  const puSelect = document.querySelector('#pu-select');
+
+  puBuy.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    let response = await fetch('/locations/phuket/' + puSelect.value, {
+      method: 'DELETE'
+    });
+    window.location.href = '/placanje';
+  });
+
+  const logoutButton = document.querySelector('#logoutButton');
+  logoutButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    localStorage.setItem('jwt', '');
+    window.location.href = '/login';
+  });
+</script>
